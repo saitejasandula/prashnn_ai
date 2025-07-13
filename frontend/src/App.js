@@ -4,8 +4,8 @@ import './App.css';
 import BlueQuizApp from './BlueQuizApp';
 import Navigation from './Navigation';
 
-const API_URL = 'http://localhost:5000/api/questions';
-
+// const API_URL = 'http://localhost:5000/api/questions';
+const API_URL = process.env.REACT_APP_API_URL || 'https://prashnn-ai.onrender.com/api/questions';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [currentView, setCurrentView] = useState('home');
